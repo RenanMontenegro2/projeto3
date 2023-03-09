@@ -8,18 +8,21 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     * quando ela é executada ela cria isso
      */
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     */
+     * quando avança deleta tabela
+     **/
     public function down(): void
     {
         Schema::dropIfExists('products');
