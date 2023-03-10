@@ -19,10 +19,4 @@ Route::get('/events/create',[EventController::class,'create']);
 Route::get('/contact',function(){
     return view('contact');
 });
-Route::get('/produtos',function(){
-    $busca=request('search');
-    return view('products');
-});
-Route::get('/produtos/{id}',function($id=null){
-    return view('products',['id'=>$id]);
-});
+
