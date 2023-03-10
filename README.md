@@ -13,3 +13,6 @@ git add .
 git commit -m "meu segundo commit"
 git push origin master
  git add .git add .
+
+--deleta todas as tabelas a migra tudo dnv--
+php artisan migrate:fresh
