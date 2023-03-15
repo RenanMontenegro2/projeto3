@@ -14,8 +14,14 @@ use App\Http\Controllers\EventController;
 |
 */
 //ERRO TA BEM AQUI
+//index mostra todos os dados do banco
 Route::get('/', [EventController::class,'index']);
+/*create formulario para colocar os dados*/
 Route::get('/events/create',[EventController::class,'create']);
+/*show ve um dado especifico do banco*/
+Route::get('/events{id}',[EventController::class,'show']);
+//store passa os dados para o banco de dados
+Route::post('/events',[EventController::class,'store']);
 Route::get('/contact',function(){
     return view('contact');
 });

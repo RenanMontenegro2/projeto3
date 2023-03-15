@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        //dados que vão ser preenchidos pelo banco de dados
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
@@ -19,7 +20,7 @@ return new class extends Migration
             $table->string('city');
             $table->boolean('private');
             /**
-                *Saber se o evento é privado ou não 
+                *Saber se o evento é privado ou não
             */
         });
     }
